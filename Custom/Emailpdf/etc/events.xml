@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!--
+        sales_order_place_after fires once right after an order row is written to the DB.
+        We use the global area so it triggers on all order placements (frontend, admin, API).
+    -->
+    <event name="sales_order_place_after">
+        <observer name="custom_emailpdf_send_order_pdf"
+                  instance="Custom\Emailpdf\Observer\SendOrderPdf"/>
+    </event>
+</config>

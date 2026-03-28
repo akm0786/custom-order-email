@@ -1,0 +1,17 @@
+{
+    "name": "custom/module-emailpdf",
+    "description": "Generates a PDF order summary and emails it to the store general contact on order placement.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.4",
+        "magento/framework": "*",
+        "magento/module-sales": "*"
+    },
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Custom\\Emailpdf\\": ""
+        }
+    }
+}
